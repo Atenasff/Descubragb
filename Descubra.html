@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quer saber de uma coisa?</title>
+<style>
+    body {
+        background-color: beige;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #mensagem {
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 100px;
+    }
+    #botoes {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div id="mensagem">Quer saber de uma coisa?</div>
+<div id="botoes">
+    <button onclick="confirmar('sim')">Sim</button>
+    <button onclick="resposta('nao')">Não</button>
+</div>
+<script>
+    function confirmar(escolha) {
+        if (escolha === 'sim') {
+            document.getElementById('mensagem').innerHTML = 'Tem certeza? <br> <button onclick="declararAmor()">Sim</button>';
+            document.getElementById('botoes').style.display = 'none';
+        }
+    }
+
+    function declararAmor() {
+        document.getElementById('mensagem').innerHTML = 'Eu te amo muitão amorzinho ❤️';
+    }
+
+    function resposta(escolha) {
+        if (escolha === 'nao') {
+            document.getElementById('mensagem').innerHTML = 'Péssima escolha';
+        }
+        document.getElementById('botoes').style.display = 'none';
+    }
+</script>
+</body>
+</html>
